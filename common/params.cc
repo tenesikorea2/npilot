@@ -219,6 +219,8 @@ std::unordered_map<std::string, uint32_t> keys = {
     {"ShowDebugMessage", PERSISTENT},
 
     {"SoftRestartTriggered", CLEAR_ON_MANAGER_START},
+// 테네시추가작업
+    {"TenesiSSHLegacy", PERSISTENT},// eonley.ppk 공용키 사용하기 위해서 추가
 };
 
 } // namespace

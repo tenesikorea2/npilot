@@ -216,9 +216,9 @@ DevicePanel::DevicePanel(SettingsWindow *parent) : ListWidget(parent) {
       Params().remove("CalibrationParams");
       Params().remove("LiveParameters");
       emit closeSettings();
-      QTimer::singleShot(100, []() {
-        Hardware::reboot();
-      });
+      //QTimer::singleShot(100, []() {
+      //  Hardware::reboot();
+      //});
     }
   });
 
@@ -560,6 +560,12 @@ CommunityPanel::CommunityPanel(SettingsWindow *parent) : ListWidget(parent) {
       "",
       "../assets/offroad/icon_shell.png",
     },
+    {
+     "TenesiSSHLegacy",
+     tr("SSH 공용키 사용"),
+     tr("SSH 공용키 사용.."),
+     "../assets/offroad/icon_shell.png",
+     },
   };
 
   for (auto &[param, title, desc, icon] : toggle_defs) {

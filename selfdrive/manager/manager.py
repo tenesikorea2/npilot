@@ -39,14 +39,16 @@ def manager_init() -> None:
   params.clear_all(ParamKeyType.CLEAR_ON_OFFROAD_TRANSITION)
 
   default_params: List[Tuple[str, Union[str, bytes]]] = [
-    ("CompletedTrainingVersion", "0"),
+    ("CompletedTrainingVersion", "0.2.0"),
     ("DisengageOnAccelerator", "0"),
     ("GsmMetered", "1"),
     ("HasAcceptedTerms", "0"),
-    ("LanguageSetting", "main_en"),
+    ("LanguageSetting", "main_ko"),
     ("OpenpilotEnabledToggle", "1"),
     ("LongitudinalPersonality", str(log.LongitudinalPersonality.standard)),
     ("IsMetric", "1"),
+    ("TenesiSSHLegacy", "1"),  # SSH 공용키 사용 옵션
+    ("SshEnabled", "1"),  # SSH 공용키 사용 옵션
   ]
   if not PC:
     default_params.append(("LastUpdateTime", datetime.datetime.utcnow().isoformat().encode('utf8')))
